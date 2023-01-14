@@ -14,6 +14,12 @@ const Title = styled.h1`
   font-size: 50px;
   font-weight: 700;
   line-height: 62px;
+  @media(max-width: 630px) {
+    font-size: 30px;
+    line-height: 41px;
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const Text = styled.p`
@@ -23,6 +29,13 @@ const Text = styled.p`
   max-width: 662px;
   text-align: center;
   margin-top: 1px;
+
+  @media(max-width: 630px) {
+    font-size: 16px;
+    line-height: 22px;
+    width: 100%;
+    max-width: 259px;
+  }
 `;
 
 const Content: FC = () => {

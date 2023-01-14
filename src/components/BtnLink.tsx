@@ -22,6 +22,17 @@ const Wrapper = styled.a`
     background-color: #fbfbfb;
     color: #175B1C;
   }
+
+  @media(max-width: 630px) {
+    max-width: 200px;
+    width: 100%;
+    min-height: 41px;
+    height: 41px;
+    font-size: 15px;
+    line-heigth: 21px;
+    padding: 11px 30px;
+    margin-top: 30px;
+  }
 `;
 
 interface IBtnLink {

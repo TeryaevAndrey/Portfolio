@@ -15,6 +15,11 @@ const Wrapper = styled.a`
   &:hover {
     box-shadow: 0 0 5px #fff;
   }
+
+  @media(max-width: 768px) {
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 interface ISocialsLink {
