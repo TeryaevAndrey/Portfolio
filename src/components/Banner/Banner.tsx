@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import Container from "../Container";
 import Header from "../Header/Header";
+import Content from "./Content";
 import Matrix from "./Matrix";
 
 const Wrapper = styled.div`
@@ -16,13 +18,16 @@ const MatrixWrapper = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
+  z-index: -1;
 `;
-
 
 const Banner: FC = () => {
   return (
     <Wrapper>
-      <Header />
+      <Container>
+        <Header />
+        <Content />
+      </Container>
       <MatrixWrapper>
         <Matrix />
       </MatrixWrapper>
