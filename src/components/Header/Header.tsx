@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from "styled-components";
 import Menu from '../Menu/Menu';
-import Socials from './Socials/Socials';
+import Socials from '../Socials/Socials';
 import {RxHamburgerMenu} from "react-icons/rx";
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { setOpenMenu } from '../../store/headerSlice';

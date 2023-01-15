@@ -25,11 +25,12 @@ const Wrapper = styled.a`
 interface ISocialsLink {
   href: string;
   img: any;
+  style?: object;
 }
 
-const SocialsLink: FC<ISocialsLink> = ({href, img}) => {
+const SocialsLink: FC<ISocialsLink> = ({href, img, style}) => {
   return (
-    <Wrapper href={href}> 
+    <Wrapper href={href} style={style}> 
       {img}
     </Wrapper>
   );

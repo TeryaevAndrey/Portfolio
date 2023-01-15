@@ -7,6 +7,7 @@ import Matrix from "./Matrix";
 
 const Wrapper = styled.div`
   position: relative;
+  height: 100vh;
 `;
 
 const MatrixWrapper = styled.div`
