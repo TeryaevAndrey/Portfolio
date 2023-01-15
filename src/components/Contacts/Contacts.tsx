@@ -23,7 +23,7 @@ const Email = styled.a`
 
 const Contacts = () => {
   return (
-    <section>
+    <section id="contacts">
       <Container>
         <Inner>
           <Title title="Связь со мной" />

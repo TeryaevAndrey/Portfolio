@@ -24,7 +24,7 @@ const MatrixWrapper = styled.div`
 
 const Banner: FC = () => {
   return (
-    <Wrapper>
+    <Wrapper id="banner">
       <Container>
         <Header />
         <Content />

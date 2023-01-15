@@ -22,7 +22,7 @@ const SkillsList = styled.div`
 
 const Skills: FC = () => {
   return (
-    <section>
+    <section id="skills">
       <Container>
         <Title title="Список навыков" />
         <Inner>
