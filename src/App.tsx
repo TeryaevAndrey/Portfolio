@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './components/About/About';
 import Banner from './components/Banner/Banner';
+import Skills from './components/Skills/Skills';
 import Works from './components/Works/Works';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Banner />
       <About />
       <Works />
+      <Skills />
     </>
   );
 }
