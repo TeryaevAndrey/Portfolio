@@ -11,6 +11,10 @@ const Inner = styled.div`
   align-items: flex-start;
   width: 100%;
   margin-top: 55px;
+
+  @media(max-width: 768px) {
+    margin-top: 30px;
+  }
 `;
 
 const SkillsList = styled.div`

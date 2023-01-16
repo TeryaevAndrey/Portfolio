@@ -18,6 +18,10 @@ const List = styled.div`
   max-width: 933px;
   width: 100%;
 
+  @media(max-width: 768px) {
+    margin-top: 30px;
+  }
+
   @media(max-width: 630px) {
     justify-content: center;
   }
