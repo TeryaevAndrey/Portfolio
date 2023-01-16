@@ -41,7 +41,7 @@ const Text = styled.p`
 const Content: FC = () => {
   return (
     <Wrapper>
-      <Title>Frontend-разработчик</Title>
+      <Title>Frontend-разработка</Title>
       <Text>Верстка, программирование сайтов и веб-приложений</Text>
       <BtnLink title="Далее" href="#about-me" style={{marginTop: "40px"}} />
     </Wrapper>
