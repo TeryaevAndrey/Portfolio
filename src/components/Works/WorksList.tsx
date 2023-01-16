@@ -17,6 +17,10 @@ const List = styled.div`
   flex-wrap: wrap;
   max-width: 933px;
   width: 100%;
+
+  @media(max-width: 630px) {
+    justify-content: center;
+  }
 `;
 
 const WorksList: FC = () => {

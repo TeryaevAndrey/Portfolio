@@ -7,7 +7,6 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 26px;
-  justify-content: ${(props: {centering?: boolean}) => props.centering ? "center" : "flex-start"};
 
   @media(max-width: 768px) {
     flex-direction: column;
@@ -29,15 +28,11 @@ const Wrapper = styled.div`
   }
 `;
 
-interface IMenu {
-  centering?: boolean;
-}
-
-const Menu: FC<IMenu> = ({centering}) => {
+const Menu: FC = () => {
   const isOpenMenu = useAppSelector(state => state.header.isOpenMenu);
 
   return (
-    <Wrapper className={`${isOpenMenu ? "active" : ""}`} centering={centering ? true : false}>
+    <Wrapper className={`${isOpenMenu ? "active" : ""}`}>
       <MenuLink title="Главная" href="#banner" />
       <MenuLink title="Обо мне" href="#about-me" />
       <MenuLink title="Портфолио" href="#portfolio" />
