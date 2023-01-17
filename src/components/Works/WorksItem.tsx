@@ -56,6 +56,7 @@ const DemoLink = styled.a`
 `;
 
 const InfoBlock = styled.div`
+  display: block;
   position: absolute;
   top: -100%;
   left: 0;
@@ -66,6 +67,10 @@ const InfoBlock = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
   gap: 6px;
   transition: all 0.2s ease;
+
+  @media(max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const InfoSkill = styled.span`

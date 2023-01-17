@@ -64,6 +64,17 @@ section {
   padding: 55px 0;
 }
 
+body::-webkit-scrollbar {
+  width: 6px;              
+}
+body::-webkit-scrollbar-track {
+  background: #000;        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #0f0;    /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+}
+
 @media (max-width: 768px) {
   section {
     padding: 30px 0;
