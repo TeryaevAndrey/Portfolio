@@ -3,8 +3,8 @@ import { headerSlice } from "./headerSlice";
 
 export const store = configureStore({
   reducer: {
-    header: headerSlice.reducer
-  }
+    header: headerSlice.reducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

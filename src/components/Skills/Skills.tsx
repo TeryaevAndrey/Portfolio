@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
-import Container from '../Container';
-import Title from '../Title';
-import SkillsItem from './SkillsItem';
+import React, { FC } from "react";
+import styled from "styled-components";
+import Container from "../Container";
+import Title from "../Title";
+import SkillsItem from "./SkillsItem";
 
 const Inner = styled.div`
   position: relative;
@@ -12,7 +12,7 @@ const Inner = styled.div`
   width: 100%;
   margin-top: 55px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: 30px;
   }
 `;
@@ -23,7 +23,7 @@ const SkillsList = styled.div`
   flex-wrap: wrap;
   gap: 50px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     gap: 25px;
   }
 `;

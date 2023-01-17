@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
 const Wrapper = styled.a`
   display: flex;
@@ -16,7 +16,7 @@ const Wrapper = styled.a`
     box-shadow: 0 0 5px #fff;
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: 25px;
     height: 25px;
   }
@@ -28,9 +28,9 @@ interface ISocialsLink {
   style?: object;
 }
 
-const SocialsLink: FC<ISocialsLink> = ({href, img, style}) => {
+const SocialsLink: FC<ISocialsLink> = ({ href, img, style }) => {
   return (
-    <Wrapper href={href} style={style}> 
+    <Wrapper href={href} style={style}>
       {img}
     </Wrapper>
   );

@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
 const Wrapper = styled.button`
   max-width: 250px;
@@ -17,18 +17,19 @@ const Wrapper = styled.button`
 
   &:hover {
     background-color: #fbfbfb;
-    color: #175B1C;
+    color: #175b1c;
   }
 `;
 
 interface IBtn {
   title: string;
   style?: object;
+  onClick?: React.MouseEventHandler;
 }
 
-const Btn: FC<IBtn> = ({title, style}) => {
+const Btn: FC<IBtn> = ({ title, style, onClick }) => {
   return (
-    <Wrapper style={style}>
+    <Wrapper style={style} onClick={onClick}>
       {title}
     </Wrapper>
   );

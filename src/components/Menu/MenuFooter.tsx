@@ -1,6 +1,6 @@
-import React, {FC} from 'react';
-import styled from 'styled-components';
-import MenuLink from './MenuLink';
+import React, { FC } from "react";
+import styled from "styled-components";
+import MenuLink from "./MenuLink";
 
 const Wrapper = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 26px;
 
-  @media(max-width: 630px) {
+  @media (max-width: 630px) {
     flex-direction: column;
     align-items: center;
   }
@@ -21,7 +21,7 @@ const MenuFooter: FC = () => {
       <MenuLink title="Обо мне" href="#about-me" />
       <MenuLink title="Портфолио" href="#portfolio" />
       <MenuLink title="Навыки" href="#skills" />
-      <MenuLink title="Контакты" href="#contacts" />    
+      <MenuLink title="Контакты" href="#contacts" />
     </Wrapper>
   );
 };

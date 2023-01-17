@@ -1,21 +1,21 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 import styled from "styled-components";
-import { useAppSelector } from '../../store/hooks';
-import MenuLink from './MenuLink';
+import { useAppSelector } from "../../store/hooks";
+import MenuLink from "./MenuLink";
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 26px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
     top: 0;
     left: -100%;
     min-height: 100vh;
-    background-color: #0B0A0A;
+    background-color: #0b0a0a;
     padding: 15px;
     min-width: 200px;
     padding-top: 70px;
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 `;
 
 const Menu: FC = () => {
-  const isOpenMenu = useAppSelector(state => state.header.isOpenMenu);
+  const isOpenMenu = useAppSelector((state) => state.header.isOpenMenu);
 
   return (
     <Wrapper className={`${isOpenMenu ? "active" : ""}`}>

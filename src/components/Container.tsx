@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 import styled from "styled-components";
 
 const ContainerStyle = styled.div`
@@ -11,12 +11,8 @@ interface IContainer {
   children: React.ReactNode;
 }
 
-const Container: FC<IContainer> = ({children}) => {
-  return (
-    <ContainerStyle>
-      {children}
-    </ContainerStyle>
-  );
+const Container: FC<IContainer> = ({ children }) => {
+  return <ContainerStyle>{children}</ContainerStyle>;
 };
 
 export default Container;

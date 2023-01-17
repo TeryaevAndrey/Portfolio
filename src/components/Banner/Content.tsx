@@ -14,7 +14,7 @@ const Title = styled.h1`
   font-size: 50px;
   font-weight: 700;
   line-height: 62px;
-  @media(max-width: 630px) {
+  @media (max-width: 630px) {
     font-size: 30px;
     line-height: 41px;
     width: 100%;
@@ -30,7 +30,7 @@ const Text = styled.p`
   text-align: center;
   margin-top: 1px;
 
-  @media(max-width: 630px) {
+  @media (max-width: 630px) {
     font-size: 16px;
     line-height: 22px;
     width: 100%;
@@ -43,7 +43,7 @@ const Content: FC = () => {
     <Wrapper>
       <Title>Frontend-разработка</Title>
       <Text>Верстка, программирование сайтов и веб-приложений</Text>
-      <BtnLink title="Далее" href="#about-me" style={{marginTop: "40px"}} />
+      <BtnLink title="Далее" href="#about-me" style={{ marginTop: "40px" }} />
     </Wrapper>
   );
 };

@@ -27,7 +27,11 @@ const Contacts = () => {
       <Container>
         <Inner>
           <Title title="Связь со мной" />
-          <BtnLink title="Telegram" href="https://t.me/teryaev2004" style={{marginTop: "30px"}} />
+          <BtnLink
+            title="Telegram"
+            href="https://t.me/teryaev2004"
+            style={{ marginTop: "30px" }}
+          />
           <Email href="mailto:teryaev.2004@mail.ru">teryaev.2004@mail.ru</Email>
         </Inner>
       </Container>

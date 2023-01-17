@@ -79,7 +79,11 @@ const About: FC = () => {
             </Text>
             <Text>Страница github:</Text>
             <BtnWrapper>
-              <BtnLink title="GitHub" href="https://github.com/TeryaevAndrey" style={{marginTop: "0"}} />
+              <BtnLink
+                title="GitHub"
+                href="https://github.com/TeryaevAndrey"
+                style={{ marginTop: "0" }}
+              />
             </BtnWrapper>
           </ContentBlock>
           <Avatar src="/images/avatar.png" alt="avatar" />

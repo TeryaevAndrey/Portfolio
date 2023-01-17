@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
 const Wrapper = styled.a`
   display: flex;
@@ -20,10 +20,10 @@ const Wrapper = styled.a`
 
   &:hover {
     background-color: #fbfbfb;
-    color: #175B1C;
+    color: #175b1c;
   }
 
-  @media(max-width: 630px) {
+  @media (max-width: 630px) {
     max-width: 200px;
     width: 100%;
     min-height: 41px;
@@ -41,7 +41,7 @@ interface IBtnLink {
   style?: object;
 }
 
-const BtnLink: FC<IBtnLink> = ({title, href, style}) => {
+const BtnLink: FC<IBtnLink> = ({ title, href, style }) => {
   return (
     <Wrapper href={href} style={style}>
       {title}

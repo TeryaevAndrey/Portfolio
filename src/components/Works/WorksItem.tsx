@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SocialsLink from "../Socials/SocialsLink";
 import { BsGithub } from "react-icons/bs";
 import { AiOutlineCaretRight } from "react-icons/ai";
+import { IWorksItem } from "../../types";
 
 const Wrapper = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
 
 const Banner = styled.div`
   width: 100%;
-  height: 200px;
+  height: 100%;
   position: relative;
   background-color: #000;
   cursor: pointer;
@@ -64,7 +65,6 @@ const InfoBlock = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   gap: 6px;
-  padding: 20px;
   transition: all 0.2s ease;
 `;
 
@@ -87,26 +87,34 @@ const InfoSkill = styled.span`
   }
 `;
 
-const WorksItem: FC = () => {
+const WorksItem: FC<IWorksItem> = ({ banner, github, demo, skills }) => {
   return (
     <Wrapper>
       <Banner>
         <InfoBlock>
-          <div style={{display: "flex", alignItems: "center", gap: "8px"}}>
-            <InfoSkill>JavaScript</InfoSkill>
-            <InfoSkill>HTML</InfoSkill>
-            <InfoSkill>CSS</InfoSkill>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              flexWrap: "wrap",
+              padding: "20px",
+            }}
+          >
+            {skills?.map((skill: string, index: number) => {
+              return <InfoSkill key={index}>{skill}</InfoSkill>;
+            })}
           </div>
         </InfoBlock>
-        <BannerImg src="/images/banner.jpg" alt="banner" />
+        <BannerImg src={banner} alt="banner" />
       </Banner>
       <Footer>
         <SocialsLink
           style={{ width: "35px", height: "35px" }}
-          href="#"
+          href={github}
           img={<BsGithub style={{ width: "100%", height: "100%" }} />}
         />
-        <DemoLink href="#">
+        <DemoLink href={demo}>
           <span>Демо</span>
           <AiOutlineCaretRight />
         </DemoLink>

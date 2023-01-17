@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
 const Link = styled.a`
   font-size: 15px;
@@ -34,12 +34,8 @@ interface IMenuLink {
   href: string;
 }
 
-const MenuLink: FC<IMenuLink> = ({title, href}) => {
-  return (
-    <Link href={href}>
-      {title}
-    </Link>
-  );
+const MenuLink: FC<IMenuLink> = ({ title, href }) => {
+  return <Link href={href}>{title}</Link>;
 };
 
 export default MenuLink;

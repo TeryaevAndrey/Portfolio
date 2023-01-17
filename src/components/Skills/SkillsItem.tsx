@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -15,12 +15,8 @@ interface ISkillsItem {
   title: string;
 }
 
-const SkillsItem: FC<ISkillsItem> = ({title}) => {
-  return (
-    <Wrapper>
-      {title}
-    </Wrapper>
-  );
+const SkillsItem: FC<ISkillsItem> = ({ title }) => {
+  return <Wrapper>{title}</Wrapper>;
 };
 
 export default SkillsItem;
