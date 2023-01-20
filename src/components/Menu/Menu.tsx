@@ -33,11 +33,11 @@ const Menu: FC = () => {
 
   return (
     <Wrapper className={`${isOpenMenu ? "active" : ""}`}>
-      <MenuLink title="Главная" href="#banner" />
-      <MenuLink title="Обо мне" href="#about-me" />
-      <MenuLink title="Портфолио" href="#portfolio" />
-      <MenuLink title="Навыки" href="#skills" />
-      <MenuLink title="Контакты" href="#contacts" />
+      <MenuLink title="Главная" href="banner" />
+      <MenuLink title="Обо мне" href="about-me" />
+      <MenuLink title="Портфолио" href="portfolio" />
+      <MenuLink title="Навыки" href="skills" />
+      <MenuLink title="Контакты" href="contacts" />
     </Wrapper>
   );
 };

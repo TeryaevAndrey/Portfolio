@@ -65,14 +65,48 @@ section {
 }
 
 body::-webkit-scrollbar {
-  width: 6px;              
+  width: 6px;
 }
+
 body::-webkit-scrollbar-track {
-  background: #000;        /* цвет дорожки */
+  background: #000;
+  /* цвет дорожки */
 }
+
 body::-webkit-scrollbar-thumb {
-  background-color: #0f0;    /* цвет плашки */
-  border-radius: 20px;       /* закругления плашки */
+  background-color: #0f0;
+  /* цвет плашки */
+  border-radius: 20px;
+  /* закругления плашки */
+}
+
+.menu-link {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.menu-link:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  height: 2px;
+  background-color: #fff;
+  animation: linkAnim 0.2s forwards ease-in-out;
+}
+
+@keyframes linkAnim {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
