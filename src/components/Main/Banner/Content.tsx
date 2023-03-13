@@ -39,7 +39,7 @@ const Content: FC = () => {
   }, [restart, speciality]);
 
   return (
-    <div className="flex flex-col items-center md:items-start text-center max-w-[500px] w-full">
+    <div className="flex flex-col items-center md:items-start text-center max-w-[550px] w-full">
       <h1 className="text-[40px] lg:text-[60px] font-bold leading-[46px] lg:leading-[70px] uppercase">
         Teryaev Andrey
       </h1>
@@ -47,7 +47,7 @@ const Content: FC = () => {
         {speciality}
         <span className="animate-pulse">|</span>
       </h2>
-      <p className="text-xl mt-3 md:text-left w-full more-md:mt-7">
+      <p className="text-xl mt-3 md:text-left w-full more-md:mt-7 max-w-[500px]">
         Добро пожаловать на мой сайт-портфолио! Здесь вы найдете мои проекты,
         созданные с использованием различных инструментов.
       </p>
