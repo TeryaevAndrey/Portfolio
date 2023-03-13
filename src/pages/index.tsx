@@ -6,6 +6,7 @@ import Banner from '@/components/Main/Banner/Banner'
 import About from '@/components/Main/About/About'
 import Projects from '@/components/Main/Projects/Projects'
 import Skills from '@/components/Main/Skills/Skills'
+import Callback from '@/components/Main/Callback/Callback'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      <Callback />
     </>
   )
 }
