@@ -17,12 +17,19 @@ body {
   overflow-x: hidden;
 }
 
+button,
+a {
+  cursor: pointer;
+}
+
 .container-app {
   max-width: 1060px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-button, a {
-  cursor: pointer;
+@media (min-width: 768px) {
+  .content-wrapper {
+    height: calc(100vh - 115px);
+  }
 }

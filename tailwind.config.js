@@ -21,6 +21,9 @@ module.exports = {
       borderRadius: {
         main: "10px",
       },
+      screens: {
+        "more-md": "950px"
+      }
     },
   },
   plugins: [],
