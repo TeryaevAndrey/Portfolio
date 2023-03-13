@@ -17,19 +17,16 @@ const Projects: FC = () => {
           <Title title="Проекты" />
           <Link href="/projects">Посмотреть все</Link>
         </div>
-        <div className="flex justify-center mx-auto mt-6 md:mt-12">
+        <div className="flex justify-center mx-auto mt-6 md:mt-12 lg:hidden">
           <Swiper
             className="projects-slider sm:max-w-[640px] lg:max-w-full"
-            pagination={true}
+            pagination={{clickable: true}}
             spaceBetween={30}
             slidesPerView={1}
             modules={[Pagination]}
             breakpoints={{
               660: {
                 slidesPerView: 2,
-              },
-              1000: {
-                slidesPerView: 3,
               },
             }}
           >
@@ -71,7 +68,7 @@ const Projects: FC = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* <div className="hidden md:grid grid-cols-2 gap-9">
+        <div className="hidden lg:grid grid-cols-3 gap-8 mt-6 md:mt-12">
         <ProjectsItem
                 img="/img/project-img.png"
                 title="Lorem"
@@ -100,7 +97,7 @@ const Projects: FC = () => {
                 github="/"
                 demo="/"
               />
-        </div> */}
+        </div>
       </div>
     </div>
   );
