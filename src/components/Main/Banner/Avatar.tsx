@@ -34,7 +34,6 @@ const Avatar: FC = () => {
         className="object-contain"
         src="/img/avatar-2.png"
         alt="avatar"
-        loading="lazy"
         fill={true}
       />
     </div>
