@@ -47,6 +47,7 @@ const Field: FC<IField> = ({
         className="border-b border-white bg-transparent w-full py-2"
         type={type}
         id={id}
+        autoComplete="off"
       />
       {error && (
         <p className="text-[#EB414B] text-[12px] absolute -bottom-[15px] left-0">
