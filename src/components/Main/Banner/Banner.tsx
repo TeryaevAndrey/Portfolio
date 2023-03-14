@@ -6,7 +6,10 @@ import Content from "./Content";
 
 const Banner = () => {
   return (
-    <div className="bg-banner-gradient min-h-screen relative pb-6 md:pb-0" id="banner">
+    <div
+      className="bg-banner-gradient min-h-screen relative pb-6 md:pb-0"
+      id="banner"
+    >
       <Header />
       <div className="container-app">
         <div className="content-wrapper flex items-center">

@@ -10,12 +10,12 @@ const Header: FC = () => {
   const storeList = useStore(store);
 
   React.useEffect(() => {
-    if(storeList.isOpenMenu === true) {
+    if (storeList.isOpenMenu === true) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = "auto";
     }
-  }, [storeList.isOpenMenu]); 
+  }, [storeList.isOpenMenu]);
 
   return (
     <header className="py-8">
@@ -25,8 +25,8 @@ const Header: FC = () => {
           <MenuMob />
         </div>
         <div className="hidden md:flex justify-between items-center">
-            <MenuList />
-            <Socials />
+          <MenuList />
+          <Socials />
         </div>
       </div>
     </header>

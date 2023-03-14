@@ -22,7 +22,7 @@ const ProjectsItem: FC<IProjectsItem> = ({
       <div className="h-full flex flex-col">
         <Link
           href={img}
-          className="relative h-[180px] min-h-[180px] rounded-main overflow-hidden"
+          className="relative h-[180px] min-h-[180px] rounded-main overflow-hidden hover:scale-[1.05] ease-linear duration-75"
         >
           <Image className="object-cover" src={img} alt={title} fill={true} />
         </Link>

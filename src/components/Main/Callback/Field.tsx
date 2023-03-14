@@ -9,7 +9,14 @@ interface IField {
   error?: string;
 }
 
-const Field: FC<IField> = ({ type, id, placeholder, onChange, value, error }) => {
+const Field: FC<IField> = ({
+  type,
+  id,
+  placeholder,
+  onChange,
+  value,
+  error,
+}) => {
   const [isFocus, setIsFocus] = React.useState<boolean>(false);
 
   const onFocusField = () => {
@@ -41,7 +48,11 @@ const Field: FC<IField> = ({ type, id, placeholder, onChange, value, error }) =>
         type={type}
         id={id}
       />
-      {error && <p className="text-[#EB414B] text-[10px] mt-2 absolute -bottom-[10px] left-0">{error}</p>}
+      {error && (
+        <p className="text-[#EB414B] text-[10px] mt-2 absolute -bottom-[10px] left-0">
+          {error}
+        </p>
+      )}
     </div>
   );
 };

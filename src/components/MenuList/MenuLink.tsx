@@ -8,10 +8,9 @@ interface MenuLink {
 }
 
 const MenuLink: FC<MenuLink> = ({ to, title }) => {
-
   const linkHandler = () => {
     setStateMenu(false);
-  }
+  };
 
   return (
     <Link

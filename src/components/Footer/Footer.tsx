@@ -9,7 +9,7 @@ const Footer: FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <MenuList />
           <div className="mt-7 md:mt-0">
-          <Socials />
+            <Socials />
           </div>
         </div>
       </div>

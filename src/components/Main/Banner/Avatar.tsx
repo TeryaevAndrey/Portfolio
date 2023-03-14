@@ -23,12 +23,13 @@ const Avatar: FC = () => {
   }, []);
 
   const styles = {
-    borderRadius: `${radius.tl}px ${radius.tr}px ${radius.bl}px ${radius.br}px`
+    borderRadius: `${radius.tl}px ${radius.tr}px ${radius.bl}px ${radius.br}px`,
   };
 
   return (
-    <div className={`duration-[1250ms] ease-linear w-[270px] h-[270px] more-md:w-[400px] more-md:h-[400px] relative rounded-[40px] more-md:rounded-tl-[${radius.tl}px] more-md:rounded-tr-[${radius.tr}px] more-md:rounded-bl-[${radius.bl}px] more-md:rounded-br-[${radius.br}px] overflow-hidden mt-11 md:mt-0`}
-        style={styles}
+    <div
+      className={`duration-[1250ms] ease-linear w-[270px] h-[270px] more-md:w-[400px] more-md:h-[400px] relative rounded-[40px] more-md:rounded-tl-[${radius.tl}px] more-md:rounded-tr-[${radius.tr}px] more-md:rounded-bl-[${radius.bl}px] more-md:rounded-br-[${radius.br}px] overflow-hidden mt-11 md:mt-0`}
+      style={styles}
     >
       <Image
         className="object-contain"
