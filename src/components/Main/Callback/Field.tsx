@@ -27,7 +27,7 @@ const Field: FC<IField> = ({ type, id, placeholder, onChange, value, error }) =>
       <label
         className={`opacity-[0.65] absolute font-light ${
           isFocus ? "top-0" : "top-[25px]"
-        } left-0 ease-linear duration-150`}
+        } left-0 ease-linear duration-150 cursor-text`}
         htmlFor={id}
       >
         {placeholder}

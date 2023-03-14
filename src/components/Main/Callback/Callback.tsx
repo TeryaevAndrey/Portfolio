@@ -21,18 +21,17 @@ const Callback: FC = () => {
   return (
     <section className="bg-callback-gradient py-6 more-md:py-20">
       <div className="container-app">
-        <form className="bg-[#ADB8F1] shadow-[0px_0px_15px_1px_rgba(255,255,255,0.25)] rounded-[30px] mt-6 md:mt-12 py-6 px-7">
-          <h5 className="text-xl text-center max-w-[200px] mx-auto">
+        <form className="bg-[#ADB8F1] shadow-[0px_0px_15px_1px_rgba(255,255,255,0.25)] rounded-[30px] mt-6 md:mt-12 py-6 px-7 more-md:py-12 more-md:px-20">
+          <h5 className="text-xl text-center max-w-[200px] more-md:max-w-full mx-auto more-md:text-2xl">
             Заполните форму, и я свяжусь с вами
           </h5>
-          <div className="flex flex-col gap-4 mt-7">
+          <div className="flex flex-col more-md:grid more-md:grid-cols-2 gap-4 more-md:gap-11 more-md:gap-y-15 mt-7 more-md:mt-14">
             <Field
               type="text"
               id="nameField"
               placeholder="Имя"
               onChange={onChangeName}
               value={name}
-              error="asdsad"
             />
             <Field
               type="text"
@@ -49,7 +48,7 @@ const Callback: FC = () => {
               value={telegram}
             />
           </div>
-          <button className="mx-auto mt-10 bg-btn-flipped-gradient min-h-[40px] px-11 py-2.5 lg:py-5 rounded-main flex justify-center items-center ease-linear duration-150 hover:shadow-[10px_10px_0_#6888b1]">
+          <button className="mx-auto mt-10 bg-btn-flipped-gradient min-h-[40px] px-11 py-2.5 rounded-main flex justify-center items-center ease-linear duration-150 hover:shadow-[10px_10px_0_#6888b1] more-md:ml-0 more-md:mr-auto">
             Отправить
           </button>
         </form>

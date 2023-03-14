@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import Burger from "./Burger";
-import MenuList from "./MenuList/MenuList";
+import MenuList from "../MenuList/MenuList";
 import MenuMob from "./MenuMob/MenuMob";
-import Socials from "./Socials/Socials";
+import Socials from "../Socials/Socials";
 
 const Header: FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import Socials from "../Socials/Socials";
-import MenuList from "../MenuList/MenuList";
+import Socials from "../../Socials/Socials";
+import MenuList from "../../MenuList/MenuList";
 import { useStore } from "effector-react";
 import store from "@/store/store";
 
