@@ -54,7 +54,7 @@ const Content: FC = () => {
 
       <Link
         className="bg-btn-gradient py-5 px-9 min-h-[60px] rounded-main flex justify-center items-center mt-7 ease-linear duration-150 hover:shadow-[10px_10px_0_#6888b1]"
-        to="contacts"
+        to="callback"
         spy={true}
         smooth={true}
         offset={50}
