@@ -17,12 +17,46 @@ body {
   overflow-x: hidden;
 }
 
+button,
+a {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
 .container-app {
   max-width: 1060px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-button, a {
-  cursor: pointer;
+.projects-slider .swiper-wrapper {
+  padding-bottom: 35px;
+}
+
+.projects-slider .swiper-pagination {
+  bottom: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.projects-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  margin: 0 !important;
+  background-color: #78a9d3;
+}
+
+.projects-slider .swiper-pagination-bullet-active {
+  background-color: #6ea3e0;
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    height: calc(100vh - 115px);
+  }
 }
