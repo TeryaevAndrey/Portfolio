@@ -8,6 +8,8 @@ import Projects from "@/components/Main/Projects/Projects";
 import Skills from "@/components/Main/Skills/Skills";
 import Callback from "@/components/Main/Callback/Callback";
 import Footer from "@/components/Footer/Footer";
+import Success from "@/components/Alerts/Success";
+import Error from "@/components/Alerts/Error";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +27,8 @@ export default function Home() {
       <Skills />
       <Callback />
       <Footer />
+      <Success />
+      <Error />
     </>
   );
 }

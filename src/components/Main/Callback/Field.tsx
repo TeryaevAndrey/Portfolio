@@ -49,7 +49,7 @@ const Field: FC<IField> = ({
         id={id}
       />
       {error && (
-        <p className="text-[#EB414B] text-[10px] mt-2 absolute -bottom-[10px] left-0">
+        <p className="text-[#EB414B] text-[12px] absolute -bottom-[15px] left-0">
           {error}
         </p>
       )}
