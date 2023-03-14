@@ -20,11 +20,11 @@ const About = () => {
           </div>
           <div className="flex flex-col text-center md:text-start mt-8 lg:mt-0 max-w-auto md:max-w-[450px] lg:max-w-[500px] w-full">
             <p className="leading-[26px]">
-              Lörem ipsum gött dide fastän presa miras. Prende bosätt an. Nisk
-              pomäligt trenilogi ett renånar. Någisk ultrapägöck inte sare, för
-              geodijånas. Mäbelt. Lörem ipsum gött dide fastän presa miras.
-              Prende bosätt an. Nisk pomäligt trenilogi ett renånar. Någisk
-              ultrapägöck inte sare, för geodijånas. Mäbelt.{" "}
+              Привет! Меня зовут Андрей, я являюсь Frontend разработчиком с
+              3+ летним опытом работы. Моя страсть к технологиям и
+              желание создавать красивые, интуитивно понятные пользовательские
+              интерфейсы, вдохновляют меня на постоянное обучение и
+              совершенствование своих навыков.
             </p>
             <div className="flex justify-center md:justify-start items-center gap-8 mt-5 more-md:mt-6">
               <LinkScroll to="skills" title="Список навыков" minH={60} />
