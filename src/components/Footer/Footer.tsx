@@ -4,7 +4,7 @@ import Socials from "../Socials/Socials";
 
 const Footer: FC = () => {
   return (
-    <div className="py-6 lg:py-12 bg-footer-gradient">
+    <div className="py-6 lg:py-12 bg-footer-gradient" id="footer">
       <div className="container-app">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <MenuList />
