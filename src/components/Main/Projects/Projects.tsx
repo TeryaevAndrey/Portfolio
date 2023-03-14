@@ -36,9 +36,7 @@ const Projects: FC = () => {
 
     getWorks();
   }, []);
-
-  console.log(works);
-
+  
   return (
     <div className="bg-projects-gradient py-6 more-md:py-20" id="projects">
       <div className="container-app">
