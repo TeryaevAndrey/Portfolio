@@ -19,7 +19,7 @@ const About = () => {
             />
           </div>
           <div className="flex flex-col text-center md:text-start mt-8 lg:mt-0 max-w-auto md:max-w-[450px] lg:max-w-[500px] w-full">
-            <p className="leading-[26px] font-[Raleway]">
+            <p className="leading-[26px]">
               Привет! Меня зовут Андрей, я являюсь Frontend разработчиком с 3
               летним опытом работы. Моя страсть к технологиям и желание
               создавать красивые, интуитивно понятные пользовательские
