@@ -77,34 +77,20 @@ const Projects: FC = () => {
           </Swiper>
         </div>
         <div className="hidden lg:grid grid-cols-3 gap-8 mt-6 md:mt-12">
-          <ProjectsItem
-            img="/img/project-img.png"
-            title="Lorem"
-            text="lorem lorem lorem"
-            github="/"
-            demo="/"
-          />
-          <ProjectsItem
-            img="/img/project-img.png"
-            title="Lorem"
-            text="lorem lorem lorem"
-            github="/"
-            demo="/"
-          />
-          <ProjectsItem
-            img="/img/project-img.png"
-            title="Lorem"
-            text="lorem lorem lorem"
-            github="/"
-            demo="/"
-          />
-          <ProjectsItem
-            img="/img/project-img.png"
-            title="Lorem"
-            text="lorem lorem lorem"
-            github="/"
-            demo="/"
-          />
+          {works.map((work) => {
+            const skills = work.skills.join("; ");
+
+            return (
+              <ProjectsItem
+                key={work.id}
+                img={work.banner}
+                title={work.title}
+                text={skills}
+                github={work.github}
+                demo={work.demo}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
