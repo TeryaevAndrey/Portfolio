@@ -24,9 +24,9 @@ const ProjectsItem: FC<IProjectsItem> = ({
           <Image className="object-cover" src={img} alt="project" fill={true} />
         </div>
         <div className="flex flex-col h-full px-2.5 pb-3.5 pt-2">
-          <div>
-            <h4 className="text-lg font-medium">{title}</h4>
-            <p className="max-h-[80px] truncate mt-1">{text}</p>
+          <div className="max-h-[89px] overflow-y-auto">
+            <h4 className="text-lg font-medium truncate">{title}</h4>
+            <p className="mt-1 leading-[19px] font-light text-clip">{text}</p>
           </div>
           <div className="flex items-center flex-wrap justify-between mt-auto">
             <Link
