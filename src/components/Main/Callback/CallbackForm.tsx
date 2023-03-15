@@ -95,7 +95,11 @@ const CallbackForm: FC = () => {
           placeholder="Имя"
           onChange={onChangeName}
           value={name.value}
-          error={name.isError ? "Введите настоящее имя без чисел и символов" : undefined}
+          error={
+            name.isError
+              ? "Введите настоящее имя без чисел и символов"
+              : undefined
+          }
         />
         <Field
           type="text"
