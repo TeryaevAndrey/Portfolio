@@ -23,21 +23,24 @@ const CallbackForm: FC = () => {
     value: "",
     isError: false,
   });
+  const [loading, setLoading] = React.useState<boolean>(false);
 
   const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName((prev) => ({ value: e.target.value, isError: false }));
+    setName({ value: e.target.value, isError: false });
   };
 
   const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail((prev) => ({ value: e.target.value, isError: false }));
+    setEmail({ value: e.target.value, isError: false });
   };
 
   const onChangeTelegram = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTelegram((prev) => ({ value: e.target.value, isError: false }));
+    setTelegram({ value: e.target.value, isError: false });
   };
 
   const formHandler = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    setLoading(true);
 
     if (!name.isError && !email.isError && !telegram.isError) {
       await axios
@@ -73,6 +76,8 @@ const CallbackForm: FC = () => {
           }, 2500);
         });
     }
+
+    setLoading(false);
   };
 
   return (
@@ -90,7 +95,7 @@ const CallbackForm: FC = () => {
           placeholder="Имя"
           onChange={onChangeName}
           value={name.value}
-          error={name.isError ? "Символов не должно быть в имени" : undefined}
+          error={name.isError ? "Введите настоящее имя без чисел и символов" : undefined}
         />
         <Field
           type="text"
@@ -121,9 +126,17 @@ const CallbackForm: FC = () => {
             setEmail({ value: "", isError: true });
           }
         }}
-        className="mx-auto mt-10 bg-btn-flipped-gradient min-h-[40px] px-11 py-2.5 rounded-main flex justify-center items-center ease-linear duration-150 hover:shadow-[10px_10px_0_#6888b1] more-md:ml-0 more-md:mr-auto"
+        className="mx-auto mt-10 bg-btn-flipped-gradient min-h-[40px] px-11 py-2.5 rounded-main flex justify-center items-center gap-2 ease-linear duration-150 hover:shadow-[10px_10px_0_#6888b1] more-md:ml-0 more-md:mr-auto"
       >
         Отправить
+        {loading && (
+          <div className="flex items-center justify-center">
+            <div
+              className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+              role="status"
+            ></div>
+          </div>
+        )}
       </button>
     </form>
   );

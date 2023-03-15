@@ -54,4 +54,9 @@ export const skillsData = [
     title: "MongoDB",
     progress: 100,
   },
+  {
+    img: "/img/skills/socket.svg",
+    title: "Socket.io",
+    progress: 100
+  }
 ];
