@@ -58,7 +58,7 @@ const Projects: FC = () => {
             }}
           >
             {works.map((work) => {
-              const skills = work.skills.join("; ") || "";
+              const skills = work.skills ? work.skills.join("; ") : "";
 
               return (
                 <SwiperSlide key={work.id}>
