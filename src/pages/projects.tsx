@@ -58,7 +58,7 @@ const Projects = () => {
           <div className="container-app">
             <div className="content-wrapper grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {works.map((work) => {
-                const skills = work.skills.join("; ");
+                const skills = work.skills.join("; ") || "";
 
                 return (
                   <ProjectsItem
