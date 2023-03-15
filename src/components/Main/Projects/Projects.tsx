@@ -76,7 +76,7 @@ const Projects: FC = () => {
         </div>
         <div className="hidden lg:grid grid-cols-3 gap-8 mt-6 md:mt-12">
           {works.map((work) => {
-            const skills = work.skills.join("; ");
+            const skills = work.skills ? work.skills.join("; ") : "";
 
             return (
               <ProjectsItem
