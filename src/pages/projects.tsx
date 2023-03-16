@@ -8,7 +8,7 @@ import { db } from "@/db/firebase";
 import ProjectsItem from "@/components/Main/Projects/ProjectsItem";
 
 const Projects = () => {
-  const worksCollection = query(collection(db, "works"), limit(6));
+  const worksCollection = query(collection(db, "works"));
   const [works, setWorks] = React.useState<IWork[]>([]);
 
   React.useEffect(() => {
