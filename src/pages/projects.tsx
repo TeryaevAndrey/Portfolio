@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import Socials from "@/components/Socials/Socials";
 import { collection, getDocs, limit, query } from "firebase/firestore";
 import Head from "next/head";
@@ -7,31 +7,34 @@ import { IWork } from "@/types.p";
 import { db } from "@/db/firebase";
 import ProjectsItem from "@/components/Main/Projects/ProjectsItem";
 
-const Projects = () => {
+export const getServerSideProps = async () => {
   const worksCollection = query(collection(db, "works"));
-  const [works, setWorks] = React.useState<IWork[]>([]);
 
-  React.useEffect(() => {
-    const getWorks = async () => {
-      const data = await getDocs(worksCollection);
+  const data = await getDocs(worksCollection);
 
-      const worksList = data.docs.map((work) => {
-        return {
-          id: work.id,
-          banner: work.data().banner,
-          title: work.data().title,
-          skills: work.data().skills,
-          github: work.data().github,
-          demo: work.data().demo,
-        };
-      });
-
-      setWorks(worksList);
+  const worksList: IWork[] = data.docs.map((work) => {
+    return {
+      id: work.id,
+      banner: work.data().banner,
+      title: work.data().title,
+      skills: work.data().skills || null,
+      github: work.data().github || null,
+      demo: work.data().demo || null,
     };
+  });
 
-    getWorks();
-  }, []);
+  return {
+    props: {
+      works: worksList,
+    },
+  };
+};
 
+interface IProjects {
+  works: IWork[];
+}
+
+const Projects: FC<IProjects> = ({ works }) => {
   return (
     <>
       <Head>
@@ -57,7 +60,7 @@ const Projects = () => {
         <div>
           <div className="container-app">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 h-full pb-8">
-              {works.map((work) => {
+              {works.map((work: any) => {
                 const skills = work.skills ? work.skills.join("; ") : "";
 
                 return (

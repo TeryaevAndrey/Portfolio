@@ -3,40 +3,18 @@ import Link from "next/link";
 import React, { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectsItem from "./ProjectsItem";
-import { collection, getDocs, limit, query } from "firebase/firestore";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper";
-import { db } from "@/db/firebase";
 import { IWork } from "@/types.p";
 
-const Projects: FC = () => {
-  const worksCollection = query(collection(db, "works"), limit(6));
-  const [works, setWorks] = React.useState<IWork[]>([]);
+interface IProjects {
+  works: IWork[];
+}
 
-  React.useEffect(() => {
-    const getWorks = async () => {
-      const data = await getDocs(worksCollection);
-
-      const worksList = data.docs.map((work) => {
-        return {
-          id: work.id,
-          banner: work.data().banner,
-          title: work.data().title,
-          skills: work.data().skills,
-          github: work.data().github,
-          demo: work.data().demo,
-        };
-      });
-
-      setWorks(worksList);
-    };
-
-    getWorks();
-  }, []);
-
+const Projects: FC<IProjects> = ({ works }) => {
   return (
     <div className="bg-projects-gradient py-6 more-md:py-20" id="projects">
       <div className="container-app">
@@ -57,7 +35,7 @@ const Projects: FC = () => {
               },
             }}
           >
-            {works.map((work) => {
+            {works.map((work: any) => {
               const skills = work.skills ? work.skills.join("; ") : "";
 
               return (
@@ -75,7 +53,7 @@ const Projects: FC = () => {
           </Swiper>
         </div>
         <div className="hidden lg:grid grid-cols-3 gap-8 mt-6 md:mt-12">
-          {works.map((work) => {
+          {works.map((work: any) => {
             const skills = work.skills ? work.skills.join("; ") : "";
 
             return (

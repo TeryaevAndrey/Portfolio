@@ -8,8 +8,39 @@ import Callback from "@/components/Main/Callback/Callback";
 import Footer from "@/components/Footer/Footer";
 import Success from "@/components/Alerts/Success";
 import Error from "@/components/Alerts/Error";
+import { collection, getDocs, limit, query } from "firebase/firestore";
+import { IWork } from "@/types.p";
+import { db } from "@/db/firebase";
+import { FC } from "react";
 
-const Home = () => {
+export const getServerSideProps = async () => {
+  const worksCollection = query(collection(db, "works"), limit(6));
+
+  const data = await getDocs(worksCollection);
+
+  const worksList: IWork[] = data.docs.map((work) => {
+    return {
+      id: work.id,
+      banner: work.data().banner,
+      title: work.data().title,
+      skills: work.data().skills || null,
+      github: work.data().github || null,
+      demo: work.data().demo || null,
+    };
+  });
+
+  return {
+    props: {
+      works: worksList,
+    },
+  };
+};
+
+interface IHome {
+  works: IWork[];
+}
+
+const Home: FC<IHome> = ({ works }) => {
   return (
     <>
       <Head>
@@ -19,7 +50,7 @@ const Home = () => {
       </Head>
       <Banner />
       <About />
-      <Projects />
+      <Projects works={works} />
       <Skills />
       <Callback />
       <Footer />
@@ -27,6 +58,6 @@ const Home = () => {
       <Error />
     </>
   );
-}
+};
 
 export default Home;

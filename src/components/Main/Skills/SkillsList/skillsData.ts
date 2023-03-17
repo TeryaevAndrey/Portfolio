@@ -57,6 +57,6 @@ export const skillsData = [
   {
     img: "/img/skills/socket.svg",
     title: "Socket.io",
-    progress: 100
-  }
+    progress: 100,
+  },
 ];
