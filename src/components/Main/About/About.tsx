@@ -28,16 +28,6 @@ const About = () => {
             </p>
             <div className="flex justify-center md:justify-start items-center gap-8 mt-5 more-md:mt-6">
               <LinkScroll to="skills" title="Список навыков" minH={60} />
-              <Link
-                className="hidden md:block ease-linear duration-150 text-white opacity-[0.8] hover:opacity-100"
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={250}
-              >
-                Мои работы
-              </Link>
             </div>
           </div>
         </div>
