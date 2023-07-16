@@ -26,6 +26,23 @@ input {
   outline: none;
 }
 
+body {
+  /* плашка-бегунок и фон */
+  scrollbar-color: #3278ba #6e99e6;
+}
+body::-webkit-scrollbar {
+  width: 6px; /* в основном для вертикальных полос прокрутки */
+  height: 6px; /* в основном для горизонтальных полос прокрутки */
+}
+body::-webkit-scrollbar-thumb {
+  /* плашка-бегунок */
+  background: #3278ba;
+}
+body::-webkit-scrollbar-track {
+  /* фон */
+  background: #6e99e6;
+}
+
 .container-app {
   max-width: 1060px;
   padding: 0 15px;

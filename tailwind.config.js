@@ -21,12 +21,10 @@ module.exports = {
           "linear-gradient(135deg, #57A5EC 0%, rgba(108, 161, 223, 0.4) 100%)",
         "about-gradient":
           "linear-gradient(180deg, rgba(11, 46, 226, 0.3) 0%, rgba(53, 110, 152, 0.25) 100%)",
-        "projects-gradient":
-          "linear-gradient(180deg, rgba(53, 110, 152, 0.25) 0%, rgba(11, 46, 226, 0.3) 100%)",
         "skills-gradient":
-          "linear-gradient(139.05deg, rgba(11, 46, 226, 0.3) 28.92%, rgba(11, 46, 226, 0.3) 28.93%, rgba(93, 108, 187, 0.41) 80.1%, rgba(0, 19, 115, 0.3) 100%)",
+          "linear-gradient(180deg, rgba(53, 110, 152, 0.25) 0%, rgba(11, 46, 226, 0.3) 100%)",
         "callback-gradient":
-          "linear-gradient(83.26deg, rgba(45, 90, 123, 0.35) 0%, rgba(11, 46, 226, 0.3) 0.01%, rgba(93, 108, 187, 0.41) 59.82%, rgba(0, 19, 115, 0.3) 100%)",
+          "linear-gradient(139.05deg, rgba(11, 46, 226, 0.3) 28.92%, rgba(11, 46, 226, 0.3) 28.93%, rgba(93, 108, 187, 0.41) 80.1%, rgba(0, 19, 115, 0.3) 100%)",
         "footer-gradient":
           "linear-gradient(83.26deg, rgba(45, 90, 123, 0.35) 0%, rgba(11, 46, 226, 0.3) 0.01%, rgba(93, 108, 187, 0.41) 59.82%, rgba(0, 19, 115, 0.3) 100%)",
       },
