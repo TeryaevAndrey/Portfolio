@@ -2,7 +2,6 @@ import LinkScroll from "@/components/LinkScroll";
 import Title from "@/components/Title";
 import Image from "next/image";
 import React from "react";
-import { Link } from "react-scroll";
 
 const About = () => {
   return (
@@ -10,10 +9,10 @@ const About = () => {
       <div className="container-app">
         <Title title="Обо мне" />
         <div className="flex flex-col md:flex-row items-center md:justify-between mt-6 md:mt-12">
-          <div className="relative w-[270px] h-[270px] more-md:w-[400px] more-md:h-[400px] overflow-hidden rounded-tl-[80px] rounded-tr-[100px] rounded-bl-[150px] rounded-br-[80px]">
+          <div className="relative w-[270px] h-[270px] more-md:w-[400px] more-md:h-[400px] overflow-hidden rounded-tl-[200px] rounded-tr-[100px] rounded-bl-[150px] rounded-br-[80px]">
             <Image
-              className="object-contain"
-              src="/img/robot.jpg"
+              className="object-cover"
+              src="/img/avatar-3.jpg"
               alt="about-me"
               fill={true}
             />
