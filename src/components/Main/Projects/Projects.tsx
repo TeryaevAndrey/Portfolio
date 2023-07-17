@@ -1,5 +1,4 @@
 import Title from "@/components/Title";
-import Link from "next/link";
 import React, { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectsItem from "./ProjectsItem";
@@ -8,19 +7,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper";
-import { IWork } from "@/types.p";
+import { projects } from "@/data/projects";
 
-interface IProjects {
-  works: IWork[];
-}
-
-const Projects: FC<IProjects> = ({ works }) => {
+const Projects: FC = () => {
   return (
     <div className="bg-projects-gradient py-6 more-md:py-20" id="projects">
       <div className="container-app">
         <div className="flex items-center justify-between">
-          <Title title="Проекты" />
-          <Link href="/projects">Посмотреть все</Link>
+          <Title title="Часть проектов" />
         </div>
         <div className="flex justify-center mx-auto mt-6 md:mt-12 lg:hidden">
           <Swiper
@@ -35,17 +29,13 @@ const Projects: FC<IProjects> = ({ works }) => {
               },
             }}
           >
-            {works.map((work: any) => {
-              const skills = work.skills ? work.skills.join("; ") : "";
-
+            {projects.map((project, idx) => {
               return (
-                <SwiperSlide key={work.id}>
+                <SwiperSlide key={idx + Math.random()}>
                   <ProjectsItem
-                    img={work.banner}
-                    title={work.title}
-                    text={skills}
-                    github={work.github}
-                    demo={work.demo}
+                    img={project.img}
+                    title={project.title}
+                    demoLink={project.demoLink}
                   />
                 </SwiperSlide>
               );
@@ -53,17 +43,13 @@ const Projects: FC<IProjects> = ({ works }) => {
           </Swiper>
         </div>
         <div className="hidden lg:grid grid-cols-3 gap-8 mt-6 md:mt-12">
-          {works.map((work: any) => {
-            const skills = work.skills ? work.skills.join("; ") : "";
-
+          {projects.map((project, idx) => {
             return (
               <ProjectsItem
-                key={work.id}
-                img={work.banner}
-                title={work.title}
-                text={skills}
-                github={work.github}
-                demo={work.demo}
+                key={idx + Math.random()}
+                img={project.img}
+                title={project.title}
+                demoLink={project.demoLink}
               />
             );
           })}

@@ -1,8 +1,5 @@
-export interface IWork {
-  id: string;
-  banner: string;
+export interface Project {
+  img: string;
   title: string;
-  skills: [] | null;
-  github: string | null;
-  demo: string | null;
+  demoLink?: string;
 }

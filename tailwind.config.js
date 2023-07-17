@@ -20,6 +20,8 @@ module.exports = {
         "social-gradient":
           "linear-gradient(135deg, #57A5EC 0%, rgba(108, 161, 223, 0.4) 100%)",
         "about-gradient":
+          "linear-gradient(180deg, rgba(11, 46, 226, 0.3) 0%, rgba(11, 46, 226, 0.3) 100%)",
+        "projects-gradient":
           "linear-gradient(180deg, rgba(11, 46, 226, 0.3) 0%, rgba(53, 110, 152, 0.25) 100%)",
         "skills-gradient":
           "linear-gradient(180deg, rgba(53, 110, 152, 0.25) 0%, rgba(11, 46, 226, 0.3) 100%)",
