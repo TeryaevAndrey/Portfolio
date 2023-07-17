@@ -15,8 +15,8 @@ export const skillsData = [
     progress: 100,
   },
   {
-    img: "/img/skills/js.svg",
-    title: "JavaScript",
+    img: "/img/skills/typescript.svg",
+    title: "TypeScript",
     progress: 100,
   },
   {
@@ -50,8 +50,18 @@ export const skillsData = [
     progress: 100,
   },
   {
+    img: "/img/skills/nest.svg",
+    title: "NestJs",
+    progress: 100,
+  },
+  {
     img: "/img/skills/mongo.svg",
     title: "MongoDB",
+    progress: 100,
+  },
+  {
+    img: "/img/skills/postgre.svg",
+    title: "PostgreSQL",
     progress: 100,
   },
   {
